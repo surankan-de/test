@@ -23,4 +23,18 @@ jobs:
         run: echo run this link for video message https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley
 
       # Runs a set of commands using the runners shell
+ on: 
+   [pull_request]
+   
+   jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+           name: memes on isssues
+           uses: deep5050/memes-on-issues-action@main
+           with:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ 
+ 
+
       
